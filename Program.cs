@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 class Program
 {
@@ -6,6 +7,7 @@ class Program
     {
         var host = new WebHostBuilder()
                 .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
                 .Build();
 

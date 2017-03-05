@@ -13,6 +13,8 @@ public class Startup
     //Configure your middleware pipeline
     public void Configure(IApplicationBuilder app)
     {
+        app.UseStaticFiles();
+
         app.Run(async (context) =>
         {
             await context.Response.WriteAsync("Hello World!");
