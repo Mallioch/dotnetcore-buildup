@@ -17,10 +17,10 @@ public class Startup
     {
         loggerFactory.AddConsole();
 
-        if (env.IsDevelopment())
-        {
+        //if (env.IsDevelopment())
+        //{
             app.UseDeveloperExceptionPage();
-        }
+        //}
 
         app.UseMiddleware<ComeAtMeBroMiddleware>();
         app.UseStaticFiles();
